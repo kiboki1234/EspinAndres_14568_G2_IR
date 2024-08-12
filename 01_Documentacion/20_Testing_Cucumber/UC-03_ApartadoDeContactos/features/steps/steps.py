@@ -17,13 +17,11 @@ def step_impl(context):
     context.browser.maximize_window()
     context.screenshot_path = capture_screenshot(context, 'Ingreso a contactos')
     time.sleep(2)
-    
 
 @when('el usuario se dirige al apartado de contacto')
 def step_impl(context):
     context.browser.find_element(By.LINK_TEXT, 'Contactos').click()
     time.sleep(2)
-
 
 @then('el sistema despliega el formulario de contacto')
 def step_impl(context):
@@ -59,24 +57,27 @@ def step_impl(context):
     assert "Por favor, complete todos los campos" in context.browser.page_source, "No se mostró el mensaje de error"
     context.screenshot_path = capture_screenshot(context, 'error_campos_vacios')
 
-@then('el sistema muestra la dirección física "{direccion}"')
-def step_impl(context, direccion):
-    assert direccion in context.browser.page_source, f"No se mostró la dirección física {direccion}"
-    context.screenshot_path = capture_screenshot(context, 'direccion_fisica')
-
-@then('el sistema muestra el número telefónico "{telefono}"')
-def step_impl(context, telefono):
-    assert telefono in context.browser.page_source, f"No se mostró el número telefónico {telefono}"
-    context.screenshot_path = capture_screenshot(context, 'numero_telefonico')
-
-@then('el sistema muestra el correo electrónico "{correo}"')
-def step_impl(context, correo):
-    assert correo in context.browser.page_source, f"No se mostró el correo electrónico {correo}"
-    context.screenshot_path = capture_screenshot(context, 'correo_electronico')
-
-@then('el sistema muestra un mapa interactivo con la ubicación de la empresa')
+@then('el sistema muestra un mensaje de error indicando que el nombre es demasiado corto')
 def step_impl(context):
-    # Aquí deberías agregar un ID o clase al mapa interactivo en el HTML para localizarlo
-    # Por ejemplo: <div id="google-map"></div>
-    assert context.browser.find_element(By.ID, 'google-map').is_displayed(), "No se mostró el mapa interactivo"
-    context.screenshot_path = capture_screenshot(context, 'mapa_interactivo')
+    assert "El nombre es demasiado corto" in context.browser.page_source, "No se mostró el mensaje de error de nombre corto"
+    context.screenshot_path = capture_screenshot(context, 'error_nombre_corto')
+
+@then('el sistema muestra un mensaje de error indicando que el nombre no debe contener números')
+def step_impl(context):
+    assert "El nombre no debe contener números" in context.browser.page_source, "No se mostró el mensaje de error por números en el nombre"
+    context.screenshot_path = capture_screenshot(context, 'error_nombre_numeros')
+
+@then('el sistema muestra un mensaje de error indicando que el correo electrónico es inválido')
+def step_impl(context):
+    assert "Correo electrónico inválido" in context.browser.page_source, "No se mostró el mensaje de error por correo inválido"
+    context.screenshot_path = capture_screenshot(context, 'error_correo_invalido')
+
+@then('el sistema muestra un mensaje de error indicando que el mensaje es demasiado corto')
+def step_impl(context):
+    assert "El mensaje es demasiado corto" in context.browser.page_source, "No se mostró el mensaje de error por mensaje corto"
+    context.screenshot_path = capture_screenshot(context, 'error_mensaje_corto')
+
+@then('el sistema muestra un mensaje de error indicando que el mensaje excede el número máximo de caracteres permitidos')
+def step_impl(context):
+    assert "El mensaje excede el número máximo de caracteres" in context.browser.page_source, "No se mostró el mensaje de error por mensaje largo"
+    context.screenshot_path = capture_screenshot(context, 'error_mensaje_largo')
