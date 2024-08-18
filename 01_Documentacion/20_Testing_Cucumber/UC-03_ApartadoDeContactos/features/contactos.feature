@@ -63,3 +63,20 @@ Feature: Apartado de Contacto en IMPACTONET
     When el usuario llena el formulario con "Alberto Morales", "alberto.morales@outlook.com" y "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa."
     And el usuario presiona el botón "Enviar"
     Then el sistema muestra un mensaje de error indicando que el mensaje excede el número máximo de caracteres permitidos
+
+  Scenario: El usuario llena y envía el formulario por WhatsApp exitosamente
+    Given el usuario accede a la página de IMPACTONET
+    When el usuario se dirige al apartado de contacto
+    Then el sistema despliega el formulario de contacto
+    When el usuario llena el formulario con "Lucía García", "lucia.garcia@gmail.com" y "Estoy interesada en el plan de fibra óptica."
+    And el usuario presiona el botón "Enviar por WhatsApp"
+    Then el sistema envía la información del formulario por WhatsApp
+    And el usuario ve un mensaje de confirmación de envío exitoso por WhatsApp
+
+  Scenario: El usuario intenta enviar el formulario por WhatsApp sin llenar todos los campos
+    Given el usuario accede a la página de IMPACTONET
+    When el usuario se dirige al apartado de contacto
+    Then el sistema despliega el formulario de contacto
+    When el usuario presiona el botón "Enviar por WhatsApp" sin llenar los campos
+    Then el sistema muestra un mensaje de error solicitando llenar todos los campos antes de enviar por WhatsApp
+

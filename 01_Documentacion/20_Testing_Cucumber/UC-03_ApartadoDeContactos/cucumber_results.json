@@ -1,0 +1,712 @@
+[
+  {
+    "uri": "features/contactos.feature",
+    "id": "apartado-de-contacto-en-impactonet",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Apartado de Contacto en IMPACTONET",
+    "description": "",
+    "elements": [
+      {
+        "id": "el-usuario-llena-y-env\u00eda-el-formulario-de-contacto-exitosamente",
+        "line": 3,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario llena y env\u00eda el formulario de contacto exitosamente",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 4,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.046727895736694
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 5,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.8797218799591064
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 6,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.13947296142578125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 7,
+            "name": "el usuario llena el formulario con \"Jos\u00e9 Mart\u00ednez\", \"jose.martinez@gmail.com\" y \"Estoy interesado en los planes de Internet.\"",
+            "result": {
+              "status": "passed",
+              "duration": 0.6284072399139404
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 8,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar\"",
+            "result": {
+              "status": "passed",
+              "duration": 2.643385171890259
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 9,
+            "name": "el sistema env\u00eda la informaci\u00f3n del formulario al correo de la empresa",
+            "result": {
+              "status": "failed",
+              "duration": 0.005621910095214844
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 10,
+            "name": "el usuario ve un mensaje de confirmaci\u00f3n de env\u00edo exitoso",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-intenta-enviar-el-formulario-de-contacto-sin-llenar-todos-los-campos",
+        "line": 12,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta enviar el formulario de contacto sin llenar todos los campos",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 13,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.809953451156616
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 14,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.827603816986084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 15,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.12746644020080566
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 16,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar\" sin llenar los campos",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 17,
+            "name": "el sistema muestra un mensaje de error solicitando llenar todos los campos",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-intenta-enviar-el-formulario-con-un-nombre-inv\u00e1lido",
+        "line": 19,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta enviar el formulario con un nombre inv\u00e1lido",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 20,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.177128076553345
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 21,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.8644204139709473
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 22,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.1297314167022705
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 23,
+            "name": "el usuario llena el formulario con \"J\" como nombre, \"juan.perez@hotmail.com\" y \"Estoy interesado en sus planes.\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 24,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 25,
+            "name": "el sistema muestra un mensaje de error indicando que el nombre es demasiado corto",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-intenta-enviar-el-formulario-con-un-nombre-que-contiene-n\u00fameros",
+        "line": 27,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta enviar el formulario con un nombre que contiene n\u00fameros",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 28,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.385059833526611
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 29,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.9726779460906982
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 30,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.18205785751342773
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 31,
+            "name": "el usuario llena el formulario con \"Juan123\", \"juan.perez@hotmail.com\" y \"Me gustar\u00eda saber m\u00e1s sobre los servicios.\"",
+            "result": {
+              "status": "passed",
+              "duration": 0.7751970291137695
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 32,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar\"",
+            "result": {
+              "status": "passed",
+              "duration": 2.6910481452941895
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 33,
+            "name": "el sistema muestra un mensaje de error indicando que el nombre no debe contener n\u00fameros",
+            "result": {
+              "status": "failed",
+              "duration": 0.007818937301635742
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-intenta-enviar-el-formulario-con-un-correo-electr\u00f3nico-inv\u00e1lido-(sin-arroba)",
+        "line": 35,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta enviar el formulario con un correo electr\u00f3nico inv\u00e1lido (sin arroba)",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 36,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.15035080909729
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 37,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.81527042388916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 38,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.13773417472839355
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 39,
+            "name": "el usuario llena el formulario con \"Mar\u00eda L\u00f3pez\", \"marialopezgmail.com\" y \"Estoy interesada en el plan de alta velocidad.\"",
+            "result": {
+              "status": "passed",
+              "duration": 0.6421017646789551
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 40,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar\"",
+            "result": {
+              "status": "passed",
+              "duration": 2.275939464569092
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 41,
+            "name": "el sistema muestra un mensaje de error indicando que el correo electr\u00f3nico es inv\u00e1lido",
+            "result": {
+              "status": "failed",
+              "duration": 0.005002498626708984
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-intenta-enviar-el-formulario-con-un-correo-electr\u00f3nico-inv\u00e1lido-(sin-dominio)",
+        "line": 43,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta enviar el formulario con un correo electr\u00f3nico inv\u00e1lido (sin dominio)",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 44,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.3548362255096436
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 45,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.823511838912964
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 46,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.12261486053466797
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 47,
+            "name": "el usuario llena el formulario con \"Carlos Fern\u00e1ndez\", \"carlos@impactonet\" y \"Quisiera saber m\u00e1s sobre el servicio empresarial.\"",
+            "result": {
+              "status": "passed",
+              "duration": 0.6562314033508301
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 48,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar\"",
+            "result": {
+              "status": "passed",
+              "duration": 2.629420757293701
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 49,
+            "name": "el sistema muestra un mensaje de error indicando que el correo electr\u00f3nico es inv\u00e1lido",
+            "result": {
+              "status": "failed",
+              "duration": 0.0030035972595214844
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-intenta-enviar-el-formulario-con-un-mensaje-demasiado-corto",
+        "line": 51,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta enviar el formulario con un mensaje demasiado corto",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 52,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.196150541305542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 53,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.780998945236206
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 54,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.12706422805786133
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 55,
+            "name": "el usuario llena el formulario con \"Laura Garc\u00eda\", \"laura.garcia@yahoo.com\" y \"Hola\"",
+            "result": {
+              "status": "passed",
+              "duration": 0.45126843452453613
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 56,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar\"",
+            "result": {
+              "status": "passed",
+              "duration": 2.5953564643859863
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 57,
+            "name": "el sistema muestra un mensaje de error indicando que el mensaje es demasiado corto",
+            "result": {
+              "status": "failed",
+              "duration": 0.0047457218170166016
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-intenta-enviar-el-formulario-con-un-mensaje-demasiado-largo",
+        "line": 59,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta enviar el formulario con un mensaje demasiado largo",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 60,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.697829008102417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 61,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.9697864055633545
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 62,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.13973569869995117
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 63,
+            "name": "el usuario llena el formulario con \"Alberto Morales\", \"alberto.morales@outlook.com\" y \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.\"",
+            "result": {
+              "status": "passed",
+              "duration": 1.5243775844573975
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 64,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar\"",
+            "result": {
+              "status": "passed",
+              "duration": 2.6874568462371826
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 65,
+            "name": "el sistema muestra un mensaje de error indicando que el mensaje excede el n\u00famero m\u00e1ximo de caracteres permitidos",
+            "result": {
+              "status": "failed",
+              "duration": 0.0025157928466796875
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-llena-y-env\u00eda-el-formulario-por-whatsapp-exitosamente",
+        "line": 67,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario llena y env\u00eda el formulario por WhatsApp exitosamente",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 68,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.193148136138916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 69,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.8129656314849854
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 70,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.1680469512939453
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 71,
+            "name": "el usuario llena el formulario con \"Luc\u00eda Garc\u00eda\", \"lucia.garcia@gmail.com\" y \"Estoy interesada en el plan de fibra \u00f3ptica.\"",
+            "result": {
+              "status": "passed",
+              "duration": 0.4916970729827881
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 72,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar por WhatsApp\"",
+            "result": {
+              "status": "passed",
+              "duration": 2.3018858432769775
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 73,
+            "name": "el sistema env\u00eda la informaci\u00f3n del formulario por WhatsApp",
+            "result": {
+              "status": "passed",
+              "duration": 0.1271381378173828
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 74,
+            "name": "el usuario ve un mensaje de confirmaci\u00f3n de env\u00edo exitoso por WhatsApp",
+            "result": {
+              "status": "failed",
+              "duration": 0.005011320114135742
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-intenta-enviar-el-formulario-por-whatsapp-sin-llenar-todos-los-campos",
+        "line": 76,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta enviar el formulario por WhatsApp sin llenar todos los campos",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 77,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.8588337898254395
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 78,
+            "name": "el usuario se dirige al apartado de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 2.863557815551758
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 79,
+            "name": "el sistema despliega el formulario de contacto",
+            "result": {
+              "status": "passed",
+              "duration": 0.15920734405517578
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 80,
+            "name": "el usuario presiona el bot\u00f3n \"Enviar por WhatsApp\" sin llenar los campos",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 81,
+            "name": "el sistema muestra un mensaje de error solicitando llenar todos los campos antes de enviar por WhatsApp",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

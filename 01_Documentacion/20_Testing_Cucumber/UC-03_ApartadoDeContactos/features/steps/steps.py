@@ -41,21 +41,42 @@ def step_impl(context):
     time.sleep(2)
     context.screenshot_path = capture_screenshot(context, 'enviar_formulario')
 
+@when('el usuario presiona el botón "Enviar por WhatsApp"')
+def step_impl(context):
+    context.browser.find_element(By.ID, 'whatsapp-button').click()  # Asegúrate que este sea el ID correcto
+    time.sleep(2)
+    context.screenshot_path = capture_screenshot(context, 'enviar_formulario_whatsapp')
+
 @then('el sistema envía la información del formulario al correo de la empresa')
 def step_impl(context):
-    # Aquí podrías agregar una verificación adicional si tienes una forma de comprobar el envío del correo
     assert "Mensaje enviado" in context.browser.page_source, "El mensaje no se envió correctamente"
     context.screenshot_path = capture_screenshot(context, 'mensaje_enviado')
+
+@then('el sistema envía la información del formulario por WhatsApp')
+def step_impl(context):
+    # Verificación adicional si tienes forma de comprobar el envío por WhatsApp
+    assert "WhatsApp" in context.browser.page_source, "El mensaje no se envió correctamente por WhatsApp"
+    context.screenshot_path = capture_screenshot(context, 'mensaje_enviado_whatsapp')
 
 @then('el usuario ve un mensaje de confirmación de envío exitoso')
 def step_impl(context):
     assert "Mensaje enviado" in context.browser.page_source, "El usuario no vio el mensaje de confirmación de envío"
     context.screenshot_path = capture_screenshot(context, 'confirmacion_envio')
 
+@then('el usuario ve un mensaje de confirmación de envío exitoso por WhatsApp')
+def step_impl(context):
+    assert "Mensaje enviado por WhatsApp" in context.browser.page_source, "El usuario no vio el mensaje de confirmación de envío por WhatsApp"
+    context.screenshot_path = capture_screenshot(context, 'confirmacion_envio_whatsapp')
+
 @then('el sistema muestra un mensaje de error solicitando llenar todos los campos')
 def step_impl(context):
     assert "Por favor, complete todos los campos" in context.browser.page_source, "No se mostró el mensaje de error"
     context.screenshot_path = capture_screenshot(context, 'error_campos_vacios')
+
+@then('el sistema muestra un mensaje de error solicitando llenar todos los campos antes de enviar por WhatsApp')
+def step_impl(context):
+    assert "Por favor, complete todos los campos antes de enviar por WhatsApp" in context.browser.page_source, "No se mostró el mensaje de error para WhatsApp"
+    context.screenshot_path = capture_screenshot(context, 'error_campos_vacios_whatsapp')
 
 @then('el sistema muestra un mensaje de error indicando que el nombre es demasiado corto')
 def step_impl(context):
