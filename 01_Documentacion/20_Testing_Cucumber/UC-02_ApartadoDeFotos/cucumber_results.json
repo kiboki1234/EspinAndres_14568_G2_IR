@@ -1,0 +1,292 @@
+[
+  {
+    "uri": "features/internet_plans.feature",
+    "id": "apartado-de-fotos-de-impactonet",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Apartado de fotos de IMPACTONET",
+    "description": "",
+    "elements": [
+      {
+        "id": "el-usuario-intenta-utilizar-el-bot\u00f3n-\"hablar-con-nosotros\"-sin-redirecci\u00f3n",
+        "line": 3,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario intenta utilizar el bot\u00f3n \"Hablar con Nosotros\" sin redirecci\u00f3n",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 4,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.799480438232422
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 5,
+            "name": "el usuario se dirige al apartado de \"Acerca de Nosotros\"",
+            "result": {
+              "status": "passed",
+              "duration": 4.0302040576934814
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 6,
+            "name": "el sistema despliega la informaci\u00f3n sobre la misi\u00f3n y visi\u00f3n de la empresa",
+            "result": {
+              "status": "failed",
+              "duration": 0.01601266860961914
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 7,
+            "name": "el usuario presiona el bot\u00f3n \"Hablar con Nosotros\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 8,
+            "name": "el sistema no redirige a ninguna p\u00e1gina",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 9,
+            "name": "el usuario ve un mensaje de error o un mensaje de que la p\u00e1gina no est\u00e1 disponible",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-no-puede-visualizar-los-trabajos-realizados",
+        "line": 11,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario no puede visualizar los trabajos realizados",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 12,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.570639371871948
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 13,
+            "name": "el usuario se dirige al apartado de \"Acerca de Nosotros\"",
+            "result": {
+              "status": "passed",
+              "duration": 5.7588019371032715
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 14,
+            "name": "el usuario se dirige al sub-apartado de \"Trabajos Realizados\"",
+            "result": {
+              "status": "failed",
+              "duration": 0.04955744743347168
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 15,
+            "name": "el sistema intenta cargar las im\u00e1genes y descripciones de los trabajos realizados",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 16,
+            "name": "el sistema no muestra ninguna imagen ni descripci\u00f3n",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 17,
+            "name": "el usuario ve un mensaje de error indicando que no se pueden cargar los trabajos realizados",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-visualiza-errores-en-la-carga-de-fotos-en-el-apartado-\"acerca-de-nosotros\"",
+        "line": 19,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario visualiza errores en la carga de fotos en el apartado \"Acerca de Nosotros\"",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 20,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.5346410274505615
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 21,
+            "name": "el usuario se dirige al apartado de \"Acerca de Nosotros\"",
+            "result": {
+              "status": "passed",
+              "duration": 4.298909902572632
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 22,
+            "name": "el sistema despliega la informaci\u00f3n sobre la misi\u00f3n y visi\u00f3n de la empresa",
+            "result": {
+              "status": "failed",
+              "duration": 0.01563572883605957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 23,
+            "name": "el usuario intenta ver fotos relacionadas con la misi\u00f3n y visi\u00f3n",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 24,
+            "name": "el sistema no carga las fotos correctamente",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 25,
+            "name": "el usuario ve un mensaje de error o fotos rotas",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "el-usuario-visualiza-correctamente-los-trabajos-realizados",
+        "line": 27,
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "El usuario visualiza correctamente los trabajos realizados",
+        "description": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given",
+            "line": 28,
+            "name": "el usuario accede a la p\u00e1gina de IMPACTONET",
+            "result": {
+              "status": "passed",
+              "duration": 5.65829610824585
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When",
+            "line": 29,
+            "name": "el usuario se dirige al apartado de \"Acerca de Nosotros\"",
+            "result": {
+              "status": "passed",
+              "duration": 3.9211344718933105
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 30,
+            "name": "el usuario se dirige al sub-apartado de \"Trabajos Realizados\"",
+            "result": {
+              "status": "passed",
+              "duration": 0.03957319259643555
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then",
+            "line": 31,
+            "name": "el sistema carga las im\u00e1genes y descripciones de los trabajos realizados",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 32,
+            "name": "el usuario puede ver las im\u00e1genes y leer las descripciones de cada trabajo realizado",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And",
+            "line": 33,
+            "name": "el sistema permite navegar por los trabajos realizados mediante un carrusel interactivo",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
